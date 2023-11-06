@@ -29,6 +29,11 @@ const HeroBanner = () => {
 
     }
   }
+  const serachHandler=()=>{
+    navigate(`/search/${query}`)
+  }
+
+
   return (
 
     <div className='heroBanner'>
@@ -48,7 +53,7 @@ const HeroBanner = () => {
               placeholder='Search for a movie or tv show....'
               onChange={(e) => setQuery(e.target.value)}
               onKeyUp={serachQueryHandler} />
-            <button>Search</button>
+            <button onClick={serachHandler}>Search</button>
           </div>
         </div>
       </ContentWrapper>
