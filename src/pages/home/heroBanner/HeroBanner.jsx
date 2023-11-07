@@ -24,6 +24,11 @@ const HeroBanner = () => {
   }, [data,url])
 
   const serachQueryHandler = (event) => {
+    if (event.key === "Enter" && query.length > 0) {
+      navigate(`/search/${query}`)
+    }
+  }
+  const searchHandler=()=>{
     if (query.length > 0) {
       navigate(`/search/${query}`)
     }
@@ -34,7 +39,7 @@ const HeroBanner = () => {
 
     <div className='heroBanner'>
       {!loading && (<div className="backdrop-img">
-        <Img src={background} />
+        <Img src={background}/>
       </div>)}
       <div className="opacity-layer"></div>
 
@@ -48,8 +53,8 @@ const HeroBanner = () => {
             <input type="text"
               placeholder='Search for a movie or tv show....'
               onChange={(e) => setQuery(e.target.value)}
-              onClick={serachQueryHandler} />
-            <button onClick={serachQueryHandler}>Search</button>
+              onKeyUp={serachQueryHandler} />
+            <button onClick={searchHandler}>Search</button>
           </div>
         </div>
       </ContentWrapper>

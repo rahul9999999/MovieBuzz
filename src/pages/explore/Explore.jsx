@@ -131,7 +131,7 @@ const Explore = () => {
                         />
                     </div>
                 </div>
-                {loading && <Spinner initial={true} />}
+                {loading && <Spinner initial={true}/>}
                 {!loading && (
                     <>
                         {data?.results?.length > 0 ? (

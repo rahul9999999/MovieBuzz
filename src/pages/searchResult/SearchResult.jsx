@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import "./SearchResult.scss"
 import InfiniteScroll from 'react-infinite-scroll-component'
-import noResults from "../../assets/no-results.png"
 import { useParams } from 'react-router-dom'
 import { fetchDataFromApi } from '../../utils/api'
-import Spinner from '../../components/spinner/Spinner'
 import ContentWrapper from '../../components/contentWrapper/ContentWrapper'
 import MovieCard from '../../components/movieCard/MovieCard'
+import Spinner from '../../components/spinner/Spinner'
+
 
 const SearchResult = () => {
   const[data,setData]=useState(null);
@@ -52,7 +52,7 @@ const SearchResult = () => {
               {`Search ${data?.total_results >1?"results":"result"} of '${query}'`}
               </div>
             <InfiniteScroll
-            className='content'
+            className="content"
             dataLength={data?.results?.length || []}
             next={fetchNextPageData}
             hasMore={pageNum<=data?.total_pages}
