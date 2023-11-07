@@ -12,14 +12,12 @@ import Explore from "./pages/explore/Explore"
 import Deatils from "./pages/details/Details"
 
 
-// https://gist.github.com/ShariqAnsari88/09dbadfd81c41b399a30f6eb9f1f9548
-
 
 
 
 function App() {
   const dispatch=useDispatch();
-  // const {url}=useSelector((state)=>state.home)
+  const {url}=useSelector((state)=>state.home)
   useEffect(()=>{
     fetchApiConfig();
     genresCall();

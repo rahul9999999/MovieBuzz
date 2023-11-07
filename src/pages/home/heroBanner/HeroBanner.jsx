@@ -24,15 +24,11 @@ const HeroBanner = () => {
   }, [data,url])
 
   const serachQueryHandler = (event) => {
-    if (event.key === "Enter" && query.length > 0) {
+    if (query.length > 0) {
       navigate(`/search/${query}`)
-
     }
   }
-  const serachHandler=()=>{
-    navigate(`/search/${query}`)
-  }
-
+  
 
   return (
 
@@ -52,8 +48,8 @@ const HeroBanner = () => {
             <input type="text"
               placeholder='Search for a movie or tv show....'
               onChange={(e) => setQuery(e.target.value)}
-              onKeyUp={serachQueryHandler} />
-            <button onClick={serachHandler}>Search</button>
+              onClick={serachQueryHandler} />
+            <button onClick={serachQueryHandler}>Search</button>
           </div>
         </div>
       </ContentWrapper>

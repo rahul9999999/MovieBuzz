@@ -47,9 +47,9 @@ const Header = () => {
 
   },[lastScrollY])
 
-  const serachQueryHandler = () => {
+  const serachQueryHandler = (event) => {
     if (event.key === "Enter" && query.length > 0) {
-      navigate(`./search/${query}`)
+      navigate(`/search/${query}`)
       setTimeout(() => {
         setShowSearch(false)    
       }, 1000);
