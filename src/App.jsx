@@ -61,7 +61,7 @@ function App() {
     <Router>
       <Header/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/:mediaType/:id" element={<Deatils/>}/>
         <Route path="/search/:query" element={<SearchResult/>}/>
         <Route path="/explore/:mediaType" element={<Explore/>}/>
