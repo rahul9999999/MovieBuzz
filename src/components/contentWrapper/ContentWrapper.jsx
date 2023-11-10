@@ -1,5 +1,5 @@
 import React from 'react'
-import "./ContentWrapper.scss"
+import "./contentWrapper.scss"
 
 const contentWrapper = ({children}) => {
   return (
